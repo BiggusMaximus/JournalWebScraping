@@ -206,9 +206,9 @@ def getInfoArticle(soups):
                     df_temp['number_of_citation'].append(number_of_citation)
                     df_temp['article_type'].append(article_type)
                     df_temp['publication_date'].append(publication_date)
-                    df_temp['publisher'].append('Wiley')
+                    df_temp['publisher'].append('Springer')
                     df_temp['abstract'].append(abstract)
-                    df_temp['keyword'].append('none')
+                    df_temp['keyword'].append(keyword)
                     print("\t" + "-"*100)
                     df_temp = pd.DataFrame(df_temp)
                     df = pd.read_csv(FILE_NAME)
@@ -218,7 +218,7 @@ def getInfoArticle(soups):
                     print(df.tail(5))
                     df_temp = ''
                     df = ''
-                    print(f"{count*(2/100)*100:.0f}%{"-"*50}{time.time()-start_time}")
+                    print(f"{count*(5/100)*100:.0f}%{"-"*50}{time.time()-start_time}")
                 except:
                     print(f"Cant input article numner: {count_article} | title: {title}")
                 
